@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="edu.meta">Florian – Onderwijs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="cv.html" data-i18n="nav.cv">CV</a></li>
+        <li><a href="hobbies.html" data-i18n="nav.hobbies">Hobby’s</a></li>
+        <li><a href="onderwijs.html" class="active" data-i18n="nav.education">Onderwijs</a></li>
+      </ul>
+    </nav>
+
+    <div class="lang-switch">
+      <label for="lang" class="visually-hidden">Taal</label>
+      <select id="lang" aria-label="Language">
+        <option value="nl">Nederlands</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="cv-section">
+    <h2 data-i18n="edu.title">Onderwijs</h2>
+
+    <div class="cv-profile">
+      <img src="images/1689689264348.jpg" alt="hoi" class="cv-photo">
+
+      <!-- container voor de events -->
+      <div class="cv-events">
+        <div class="event">
+          <time datetime="2025-09">september 2025</time>
+          <h3><a style="text-decoration: none; color: yellow;" href="#bedrijfsbezoeken" data-i18n="edu.event1.title">Bedrijfsbezoeken</a></h3>
+          <p data-i18n="edu.event1.text">Met school verschillende bedrijven bezocht.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2 data-i18n="edu.location.title">Locatie – Firda Julianalaan</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=nl&amp;q=firda%20julianalaan&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="cv-section" id="bedrijfsbezoeken">
+    <h2 data-i18n="edu.event1.title">Bedrijfsbezoeken</h2>
+    <p data-i18n="edu.event1.detail">
+      Ik ben met school naar Dairy Campus, Maarsingh & Van Steijn en het CJIB geweest. Het was interessant om te zien hoe verschillend deze organisaties werken en wat je er allemaal kunt leren.
+    </p>
+  </section>
+
+  <script src="javascript/menu.js"></script>
+  <script src="javascript/translate.js"></script>
+</body>
+</html>
