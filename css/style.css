@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f1220;
+  color: #fff;
+}
+
+
+.site-header {
+  background: #161a2e;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  top: 100%;       
+  left: 0;
+  width: 100%;        
+  background: #161a2e;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+
+  
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+nav.open {
+  display: block;
+  max-height: 100dvh;   /* zodat alles altijd past */
+  overflow: auto; 
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  display: block;
+}
+
+nav a:hover {
+  background: #00e5ff;
+  color: #000;
+}
+
+nav a.active {
+  background: #ffd200;
+  color: #000;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav.open {
+  display: block;
+}
+
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 3px solid #0077cc;
+  padding-bottom: 0.3em;
+  color: #ffd200;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5em;
+  color: #00e5ff; 
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #f0f3f6;
+}
+
+
+.cv-section {
+  padding: 1.5em;
+  margin: 1em auto;
+  max-width: 800px;
+  border-radius: 10px;
+  background: #161a2e; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+
+.cv-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cv-list li {
+  margin-bottom: 0.5em;
+}
+
+.cv-list strong {
+  display: inline-block;
+  width: 140px;
+  color: #ffd200;
+}
+
+
+.cv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.cv-table th, .cv-table td {
+  padding: 0.75em;
+  border-bottom: 1px solid #252a4a;
+  text-align: left;
+}
+
+.cv-table th {
+  background: #252a4a;
+  color: #ffd200;
+}
+
+
+.cv-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.cv-columns div {
+  flex: 1;
+  min-width: 200px;
+}
+.cv-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+
+.cv-photo {
+  width: 180px;        
+  height: 240px;     
+  object-fit: cover;   
+  border-radius: 10px; 
+  border: 3px solid #ffd200;
+}
+
+
+
+.hobby {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #161a2e;
+  border: 1px solid #252a4a;
+  border-radius: 8px;
+}
+
+.hobby h2 {
+  margin-top: 0;
+  color: #ffd200;
+}
+
+.hobby p {
+  color: #ccc;
+}
+
+main h1 {
+  font-size: 2.2rem;
+  color: #ffd200;
+  text-align: center;
+  margin: 1rem auto 1rem;
+  border: none;
+  padding-bottom: 0;
+}
+
+main > p {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ddd;
+  background: #161a2e;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+
+.site-header {
+  position: relative;
+  z-index: 1100; 
+}
+
+
+.site-header nav {
+  left: 0;          
+        
+  width: 240px;     
+}
+.onderwijs-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.onderwijs-profile img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px; 
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* verhouding 16:9 */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  margin-top: 1rem;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.cv-events {
+  display: flex;
+  flex-direction: column;    /* zorgt dat alle .event onder elkaar komen */
+  gap: 1.5rem;               /* ruimte tussen gebeurtenissen */
+}
+html {
+  scroll-behavior: smooth;
+}
+.lang-switch {
+  margin-left: auto;
+  padding-left: 1rem;
+}
+/* toegankelijk maar onzichtbaar label */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+/* dropdown matcht jouw header-stijl */
+.lang-switch select {
+  background: #0f1220;
+  color: #fff;
+  border: 1px solid #252a4a;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
